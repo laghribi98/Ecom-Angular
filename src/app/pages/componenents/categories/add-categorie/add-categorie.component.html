@@ -1,0 +1,23 @@
+<div class="card">
+
+    <div class="card-header">
+
+        <div class="card my-5">
+            <div class="card-body">
+                <h3 style="text-align:center">Categories</h3>
+                <form (ngSubmit)="onSubmitCategorie()" >
+                    <div class="form-group">
+                        <label for="nom">Description </label>
+                        <input type="text" [(ngModel)]="categorie.description" class="form-control" id="nom" name="nom" placeholder="nom">
+                    </div>
+                    <div class="form-group">
+                        <label for="local">Image </label>
+                        <input type="text" [(ngModel)]="categorie.img" class="form-control" id="local" name="local" placeholder="prenom">
+                    </div>
+                   
+                    <button type="submit" class="btn-primary">Ajouter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

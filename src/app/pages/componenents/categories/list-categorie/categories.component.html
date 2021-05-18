@@ -1,0 +1,31 @@
+<div class="card text-left">
+  <img class="card-img-top" src="holder.js/100px180/" alt="">
+  <div class="card-body">
+    <h4 class="card-title">Listes des categories</h4>
+    <table class="table table-stripped table-responsive">
+        <tr>
+            <th>ID</th>
+            <th>Description</th>
+            <th>Images</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let cat of categories">
+    
+            <td>{{cat.id}}</td>
+            <td>{{cat.description}}</td>
+            <td>{{cat.img}}</td>
+            <td>
+                <li class="list-inline-item">
+                    <button class="btn-danger" (click)="delete(cat)"> Supprimer</button> &#160;
+                    <a href="/pages/update-categorie/{{cat.id}}">
+                        <button type="button" class="btn-warning">Modifier</button>
+                    </a>
+    
+                </li>
+    
+            </td>
+    
+        </tr>
+    </table>
+  </div>
+</div>
