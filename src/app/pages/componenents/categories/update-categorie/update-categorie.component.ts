@@ -11,7 +11,7 @@ import { CategorieService } from '../services/categorie.service';
 export class UpdateCategorieComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,private CategorieService: CategorieService,private router: Router) { }
-  categorie:CategorieModule;
+  categorie:any;
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
@@ -22,10 +22,14 @@ export class UpdateCategorieComponent implements OnInit {
   }
 
   OnSubmitUpdate(){
-    this.CategorieService.updateCategorie(this.categorie).subscribe(result => this.gotoNewListCategories());
+    
+    this.CategorieService.updateCategorie(this.categorie).subscribe(result =>this.gotoNewListCategories());
+    console.log(this.categorie);
+   
   }
   gotoNewListCategories(){
     this.router.navigate(['pages/categories']);
+    console.log(this.categorie);
   }
 
 }

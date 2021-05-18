@@ -31,6 +31,6 @@ export class CategorieService {
     return this.http.get<CategorieModule>(this.url+ id);
   }
   public updateCategorie(categorie: CategorieModule){
-    return this.http.patch(this.url  + categorie.id, categorie );
+    return this.http.put(this.url  + categorie.id, categorie );
   }
 }
